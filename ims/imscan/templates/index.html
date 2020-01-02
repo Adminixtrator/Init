@@ -39,7 +39,9 @@
         <div class="container">
             {% if extracted_text %}
             <div class="form-group">
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <p class="lead"><b>Result</b></p>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" style="background-color: transparent;">{{ extracted_text }}</textarea>
+              <button onclick="ccT()" type="button" class="btn btn-outline-success" style="float: right;">Copy</button>
             </div>
             {% endif %}
           <p class="lead"><b>Please ensure to upload clear pictures for optimum results.</b></p>
@@ -61,6 +63,20 @@
         infoArea.textContent =  fileName;
 }
     
+
+    function ccT() {
+  
+        var copyText = document.getElementById("exampleFormControlTextarea1");
+
+        copyText.select(); 
+        copyText.setSelectionRange(0, 99999); 
+
+        document.execCommand("copy");
+
+        alert("Copied");
+}
+
+
     </script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
