@@ -7,6 +7,9 @@ from PIL import Image
 from PIL import ImageFilter
 
 # Create your views here.
+#pt.pytesseract.tesseract_cmd = 'Tesseract-OCR/tesseract.exe'
+pt.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
+
 def ocr_core(filename):
     """
     This function will handle the core OCR processing of images.
