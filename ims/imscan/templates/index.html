@@ -10,6 +10,7 @@
 </head>
 <body>
 
+  {% load static %}
 
     <div class="jumbotron jumbotron-fluid"style="margin-bottom: 0px;">
         <div class="container">
@@ -17,12 +18,12 @@
           <p class="lead">This is just an evaluation model.</p>
 
 
-          <form action="#" method="POST">{% csrf_token %}
+          <form action="#" method="POST" enctype="multipart/form-data">{% csrf_token %}
 
           <div class="input-group mb-3">
             <div class="custom-file">
-              <input type="file" class="custom-file-input" id="inputGroupFile02" required multiple>
-              <label class="custom-file-label" for="inputGroupFile02" id="inputGroupFile02-filename" aria-describedby="inputGroupFileAddon02" accept="image/x-png,image/gif,image/jpeg" style="color: grey;">Click to add file</label>
+              <input type="file" class="custom-file-input" id="inputGroupFile02" name="file" accept="image/x-png,image/gif,image/jpeg" required>
+              <label class="custom-file-label" for="inputGroupFile02" id="inputGroupFile02-filename" aria-describedby="inputGroupFileAddon02" style="color: grey;">Click to add file</label>
             </div>
             
           </div>
